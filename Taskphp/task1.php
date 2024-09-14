@@ -37,11 +37,32 @@ class Rectangle extends Shape
         return $this->width * $this->height;
     }
 }
+class Square extends Shape
+{
+    private $width;
+
+
+
+    public function __construct($width)
+    {
+        $this->width = $width;
+
+    }
+
+
+    public function getArea()
+    {
+        return $this->width * pow($this->width, 2);
+    }
+}
 $circle = new Circle(4);
 echo "Area of Crcle is" . $circle->getArea() . "\n";
 
 $rectangle = new Rectangle(4, 7);
-echo "Area of rEACTABGLE is" . $rectangle->getArea() . "\n";
+echo "Area of Rectangle is" . $rectangle->getArea() . "\n";
+$square = new Square(6);
+echo "Area of Square" . $square->getArea() . "\n";
+
 
 
 
